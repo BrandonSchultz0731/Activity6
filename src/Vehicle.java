@@ -13,6 +13,7 @@ public class Vehicle implements Engine, Chassis {
 
 
 
+
   public Vehicle() {
     vehicleManufacturedDate = new Date();
     vehicleManufacturer = "Generic";
@@ -114,9 +115,9 @@ public class Vehicle implements Engine, Chassis {
 
   public String toString() {
     return "Manufacturer Name : " + vehicleManufacturer + "\n"
-        + "Manufacturer date : " + vehicleManufacturedDate + "\n"
+        + "Manufactured Date : " + vehicleManufacturedDate + "\n"
         + "Vehicle Make : " + vehicleMake + "\n"
-        + "Vehicle Mode : " + vehicleModel + "\n"
+        + "Vehicle Model : " + vehicleModel + "\n"
         + "Vehicle Type : " + vehicleType + "\n"
         + vehicleEngine.toString();
   }

@@ -16,12 +16,12 @@ public class ManufacturedEngine implements Engine {
     engineMake = "Generic";
     engineModel = "Generic";
     engineCylinders = 0;
-    engineType = "85 AKI";
-    driveTrain = "2WD: Two-Wheel Drive";
+    engineType = "Generic";
+    driveTrain = "Generic";
   }
 
   public ManufacturedEngine(String engineManufacturer, Date engineManufacturedDate,
-      String engineMake, String engineModel, int engineCylinders, String engineType,
+      String engineMake, String engineModel, String engineType,int engineCylinders,
       String driveTrain) {
     this.engineManufacturer = engineManufacturer;
     this.engineManufacturedDate = engineManufacturedDate;

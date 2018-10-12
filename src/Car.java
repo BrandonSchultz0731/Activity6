@@ -6,21 +6,48 @@ public class Car extends Vehicle {
   private int carAxle;
 
   public Car() {
+
     super();
+    Feature[] f = {new InteriorFeature("No Interior Features"),
+        new ExteriorFeature("No Exterior Features")};
+    this.feature = f;
+    this.carAxle = 2;
+
+
   }
 
   public Car(Date vehicleManufacturedDate, String vehicleManufacturer,
       String vehicleMake, String vehicleModel, Chassis vehicleFrame, String vehicleType,
-      String driveTrain, Engine vehicleEngine) {
+      String driveTrain, Engine vehicleEngine, Feature[] feature, int carAxle) {
     super(vehicleManufacturedDate, vehicleManufacturer, vehicleMake, vehicleModel, vehicleFrame,
         vehicleType, driveTrain, vehicleEngine);
+    this.feature = feature;
+    this.carAxle = carAxle;
   }
 
   public String getExteriorFeatures() {
-    return "";
+    String extFeatures = "";
+    for(Feature f: feature){
+      if(f instanceof ExteriorFeature){
+        extFeatures += f.toString() + "\n";
+      }
+    }
+    return extFeatures;
   }
 
   public String getInteriorFeatures() {
-    return "";
+    String intFeatures = "";
+    for(Feature f: feature){
+      if(f instanceof InteriorFeature){
+        intFeatures += f.toString() + "\n";
+      }
+    }
+    return intFeatures;
+  }
+  public String toString(){
+    return super.toString() + "\n"
+        + "Features : \n" + getInteriorFeatures()
+        + getExteriorFeatures()
+        + "Car Axle : " + carAxle;
   }
 }
